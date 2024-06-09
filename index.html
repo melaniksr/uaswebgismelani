@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page WebGIS Kota Surabaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Menambahkan CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+<link rel="stylesheet" href="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.css" />
+<!-- Menambahkan JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-
+20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"charset="utf-8"></script>
+<script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.js"></script>
+<!-- Menambahkan Jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <header id="navbar">
+        <div class="container">
+        <div class="logo">
+        <img src="asset/Surabaya.png" alt="Logo" width="100">
+        <h1>WebGIS Kota Surabaya</h1>
+        </div>
+        <nav>
+        <ul>
+        <li><a href="#hero-section">Home</a></li>
+        <li><a href="#map-section">Map</a></li>
+        <li><a href="#data-section">Data</a></li>
+        <li><a href="#author-section">Author</a></li>
+        <li><a href="#footer">Contact</a></li>
+        </ul>
+        </nav>
+        </div>
+        </header>
+        <div id="hero-section" class="hero-section">
+            <div class="hero-content">
+            <h1>WebGIS Daerah Bahaya Banjir</h1>
+            <p>Halaman untuk Melakukan Eksplorasi Daerah Bahaya Banjir di Kota Surabaya</p>
+            </div>
+            </div>
+            <div id="map-section">
+              <div class="slider">
+                  <div class="slide-track">
+                    <div class="slide">
+                      <p>Jelajahi WebGIS Daerah Bahaya Banjir di Kota Surabaya</p>
+                    </div>
+                    <div class="slide">
+                      <p>Jelajahi WebGIS Daerah Bahaya Banjir di Kota Surabaya</p>
+                    </div>
+                    <div class="slide">
+                      <p>Jelajahi WebGIS Daerah Bahaya Banjir di Kota Surabaya</p>
+                    </div>
+                    <!-- tambahkan slide sesuai kebutuhan -->
+                  </div>
+                </div>
+              <div id="map">
+              <!-- akan muncul peta disini -->
+              </div>
+              </div>
+              <div id="data-section">
+              <h2>Data Tersedia</h2>
+              <div class="container">
+              <div class="column">
+              <div class="data-item">
+              <img src="asset/kotasura.jpg" alt="Image 1">
+              <div class="description">
+              <h3>Kota Surabaya</h3>
+              <p>Sebagai salah satu kota terbesar dan terpadat di Indonesia, kota Surabaya sering menghadapi masalah banjir terutama 
+                saat musim hujan dikarenakan kota ini terletak di daerah dataran rendah dan memiliki iklim tropis. Untuk mengatasi 
+                masalah ini, pemerintah kota telah mengambil langkah-langkah seperti meningkatkan kapasitas sistem drainase dan 
+                membangun waduk dan pompa air. Salah satu upaya penting lainnya adalah penggunaan teknologi WebGIS untuk memetakan 
+                daerah rawan banjir. WebGIS ini memungkinkan pemerintah dan masyarakat untuk memantau dan mengidentifikasi area yang rentan 
+                terhadap banjir secara real-time. Selain itu, akses publik ke WebGIS meningkatkan kesadaran dan kesiapsiagaan masyarakat 
+                terhadap banjir. Dengan teknologi ini, kota Surabaya dapat mengelola risiko banjir lebih efektif dan meningkatkan kualitas 
+                hidup warganya.</p>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="column">
+                  <div class="data-item">
+                      <img src="asset/petaadmin.png" alt="Image 1">
+          <div class="description">
+          <h3>Batas Administrasi</h3>
+          <p>Kota Surabaya merupakan daerah dataran rendah
+            dengan ketinggian 3-6 meter diatas permukaan air laut, kecuali di sebelah selatan ketinggian 25-50 meter 
+            diatas permukaan air laut. Kota Surabaya terbagi menjadi 31 kecamatan dan 154 Kelurahan. Kecamatan yang 
+            wilayahnya paling luas adalah Kecamatan Benowo, yaitu sekitar 23.73 km2. Sedangkan yang paling kecil 
+            adalah kecamatan Simokerto dengan luas wilayah 2.59 km2. Wilayah Kota Surabaya bagian utara, bagian timur 
+            berbatasan dengan Selat Madura, bagian selatan berbatasan dengan Kabupaten Sidoarjo, dan bagian barat berbatasan
+            dengan Kabupaten Gresik. Berdasarkan data yang diperoleh dari Stasiun Meteorologi Juanda, suhu rata-rata kota
+            Surabaya berkisar antara 26°C hingga 29°C. </p>
+          </div>
+          </div>
+          </div>
+          <div class="column">
+          <div class="data-item">
+          <img src="asset/petasungai.png" alt="Image 1">
+          <div class="description">
+          <h3> Daerah Aliran Sungai</h3>
+          <p>Daerah Aliran Sungai berperan penting dalam mengatur aliran air hujan dari hulu ke hilir
+            dan setiap gangguan atau ketidakseimbangan dalam pengelolaan DAS dapat mempengaruhi kejadian
+            banjir di daerah perkotaan. Seperti yang terlihat pada peta, Kota Surabaya dilalui banyak
+            sekali aliran sungai.
+            DAS mengumpulkan air hujan dari daerah tangkapan dan mengalirkannya 
+            melalui jaringan sungai. Ketika curah hujan tinggi, volume air yang masuk ke sungai-sungai di 
+            Surabaya, seperti sungai kalimas dan sungai jagir meningkat drastis. Jika kapasitas sungai tidak 
+            cukup untuk menampung air ini, maka dapat terjadi banjir. 
+          </p>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="container">
+          <div class="column">
+          <div class="data-item">
+          <img src="asset/petabanjir1.png" alt="Image 1">
+          <div class="description">
+          <h3>Bahaya Banjir</h3>
+          <p>Peta bahaya banjir dapat dijelaskan menggunakan indeks bahaya. Diantaranya adalah rendah yang
+            disimbolkan berwarna hijau, lalu sedang berwarna kuning, dan terakhir tinggi berwarna merah.
+          Kemungkinan banjir di Kota Surabaya bisa disebabkan karena tidak adanya tanggul di aluran sungai.
+        Selain itu, DAS (Daerah Aliran Sungai) yang mengalami pendangkalan dan pencemaran juga bisa menyebabkan
+      banjir di Kota Surabaya.</p>
+          </div>
+          </div>
+          </div>
+          </div>  
+          <div id="author-section">
+            <div class="author-content">
+              <h2>Tentang Pembuat</h2>
+              <img src="asset/Melani.png" alt="Profile Picture" class="profile-picture">
+              <div class="author-name">
+              <h3>Melani Kartika Sari</h3>
+              </div>
+            <p> Mahasiswa Sains Informasi Geografi di Universitas Pendidikan Indonesia dengan minat terhadap SIG, kartografi, penginderaan
+              jauh, WebGIS, analisis spasial, dan perencanaan wilayah yang memiliki komitmen dan semangat juang yang tinggi. 
+              Selalu termotivasi mencari peluang untuk mengembangkan potensi dan keterampilan sebagai analis SIG. WebGIS ini
+              dibuat untuk memenuhi tugas UAS WebGIS dengan dosen pengampu Bapak Haikal Muhammad Ihsan, M.Sc dan dosen praktisi Bapak
+            Muhammad Abia Saefullah.</p>
+              </div>
+              </div>
+              <div id="footer">
+                <div class="footer-content">
+                <h3>Hubungi Saya</h3>
+                <p>Email: melanikartikasari31@gmail.com</p>
+                <p>Phone: +6283184772081</p>
+                </div>
+                </div>  
+<script src="script.js"></script>
+                     
+</body>
+</html>
+

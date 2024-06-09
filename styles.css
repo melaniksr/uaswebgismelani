@@ -1,0 +1,287 @@
+/* Style Kerangka Secara Umum */
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    caret-color: transparent;
+    }
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+    /* Seluruh Komponen Pada Header */
+    .logo {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    }
+    .logo img {
+    width: 80px; /* Set the width of the logo */
+    margin-right: 10px; /* Add some space between the image and title */
+    }
+    .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    }
+    header nav {
+    display: flex;
+    justify-content: flex-start;
+    }
+    header nav a {
+    color:#fcffe3;
+    text-decoration:none;
+    font-weight: bold;
+    margin: 0 20px;
+    }
+    #navbar {
+        background-color: #d2d7e1a8; /* Soft blue color without transparency */
+        color: #393e14;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        border-bottom: 2px solid #150000;
+        font-family: 'Montserrat', sans-serif;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        }
+        .logo h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        }
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+        nav ul li {
+        display: inline;
+        margin-left: 20px;
+        }
+        nav ul li:first-child {
+        margin-left: 0;
+        }
+        nav ul li a {
+        color: #393e14;
+        text-decoration: none;
+        font-size: 16px;
+        position: relative; /* Needed for pseudo-element positioning */
+        }
+        nav ul li a::before {
+        content: '';
+        position: absolute;
+        top: -7px; /* Move the pseudo-element up by half of the hover size */
+        left: -7px; /* Move the pseudo-element left by half of the hover size */
+        width: calc(100% + 14px); /* Expand the width by 14 pixels (7px on each side) */
+        height: calc(100% + 14px); /* Expand the height by 14 pixels (7px on each side) */
+        background-color: #d2d7e1; /* Background color without transparency */
+        border-radius: 10px; /* Rounded corners */
+        z-index: -1; /* Behind the text */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        nav ul li a:hover::before {
+        background-color: #E8EBD2; /* Adjusted hover color without transparency */
+        }
+        nav ul li a:hover {
+            color: #80bfff; /* Adjusted font color to match hover color */
+        }
+        .hero-section {
+            margin-top: 0px; /* Adjust margin to make room for fixed navbar */
+            background-image: 
+            url('https://ikbis.ac.id/wp-content/uploads/2021/03/Anda-di-Surabaya-Inilah-Pentingnya-Menggunakan-Konsultan-Pajak-Surabaya.jpg'); /* Replace 
+            'city-background.jpg' with your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            }
+            .hero-content {
+            max-width: 1800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #393e14;
+            }
+            .hero-content p{
+                font-size: 20px;
+            }
+     /* Map Section */
+#map {
+    width: 95%;
+    height: 800px;
+    background-color: lightgray;
+    margin: 40px auto; /* Adjusted margin for space */
+    border: 2px solid #ccc; /* Add a border with a subtle color */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* Relative positioning for child elements */
+    z-index: 100; /* Set z-index to be behind the header */
+}
+#map-section h2 {
+text-align: center;
+margin-top: 20;
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+.map-section{
+    background-color: #80bfff;
+    width: 100%;
+    height: 80px;
+}
+.slider {
+    overflow: hidden;
+  }
+  
+  .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #80bfff;
+  }
+.slide p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #393e14;
+}
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }                    
+/* Data Section Styles */
+#data-section {
+    background-color: #80c0ff6b;
+    padding: 60px 0;
+    }
+    #data-section .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 100px;
+    justify-content: flex-start;
+    }
+    #data-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    clear: both;
+    }
+    .column {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    }
+    .data-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: auto 10px;
+    }
+    .data-item img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        }
+        .description {
+        padding: 20px;
+        height: 500px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        }
+        .description h3 {
+        margin-top: 0;
+        font-size: 24px;
+        text-align: center;
+        }
+        .description p {
+        color: #555;
+        font-size: 16px;
+        }
+/* Author Section */
+#author-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  }
+  .author-content {
+  max-width: 800px;
+  margin: 0 auto;
+  }
+  .author-content h2 {
+  text-align: center;
+  }
+  .author-name {
+  text-align: center; /* Center-align only the author's name */
+  }
+  .profile-picture {
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+  margin: 0 auto 20px; /* Center the picture horizontally and add margin at the bottom */
+  display: block; /* Ensure it behaves as a block element */
+  }
+  #footer {
+  background-color: #80bfff;
+  color: #E8EBD2;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  flex-shrink: 0;
+  }
+  #footer {
+    background-color: #80c0ff6b;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    flex-shrink: 0;
+    }
+    .legend {
+      padding: 6px 8px;
+      background-color: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      }
+      .legend div {
+      width: 30px;
+      height: 15px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+      }
+      div.legend.leaflet-control br {
+      clear: both;
+      }            
